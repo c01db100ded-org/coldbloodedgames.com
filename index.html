@@ -2,187 +2,134 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Coldblooded Games — Crown &amp; Outpost</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Coldblooded Games — Creators of Crown &amp; Outpost, a medieval fortress defense strategy game for Android.">
+<title>Coldblooded Games — Tactical Crown &amp; Fortress Games</title>
+<meta name="description" content="Coldblooded Games — tactical crown-and-fortress games. Crown & Outpost (Android, free, offline) and Crown & Campaign (desktop formation battles).">
+<link rel="icon" href="assets/icon-outpost.png" type="image/png">
 <style>
-  :root {
-    --bg-color: #0e1117;
-    --card-bg: #161b22;
-    --accent: #e5a93b;
-    --text: #e6edf3;
-    --text-muted: #8b949e;
-    --border: #30363d;
+  :root{
+    --bg:#0f1115; --panel:#171b22; --panel2:#1f242e; --line:#2a303b;
+    --text:#e8ecf1; --muted:#9aa3b2; --accent:#d4a437; --accent-ink:#1a1405;
+    --radius:16px;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text);
-    line-height: 1.6;
-    padding: 2rem 1rem;
-    display: flex;
-    justify-content: center;
-  }
-  .container {
-    max-width: 720px;
-    width: 100%;
-  }
-  header {
-    text-align: center;
-    margin-bottom: 2.5rem;
-  }
-  .banner {
-    width: 100%;
-    max-height: 280px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid var(--border);
-    margin-bottom: 1.5rem;
-  }
-  .logo-row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-bottom: 0.5rem;
-  }
-  .app-icon {
-    width: 64px;
-    height: 64px;
-    border-radius: 14px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  }
-  h1 {
-    font-size: 2rem;
-    color: var(--accent);
-    letter-spacing: -0.5px;
-  }
-  .tagline {
-    font-size: 1.1rem;
-    color: var(--text-muted);
-  }
-  .card {
-    background-color: var(--card-bg);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 1.5rem;
-    margin-bottom: 1.5rem;
-  }
-  h2 {
-    font-size: 1.3rem;
-    margin-bottom: 0.75rem;
-    color: var(--text);
-  }
-  p {
-    margin-bottom: 0.75rem;
-  }
-  ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-  }
-  li {
-    margin-bottom: 0.4rem;
-  }
-  .badge {
-    display: inline-block;
-    padding: 0.2rem 0.6rem;
-    border-radius: 4px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    background: rgba(229, 169, 59, 0.15);
-    color: var(--accent);
-    border: 1px solid rgba(229, 169, 59, 0.3);
-    margin-bottom: 0.8rem;
-  }
-  .links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  a.btn {
-    display: inline-block;
-    background-color: #21262d;
-    color: var(--text);
-    text-decoration: none;
-    padding: 0.6rem 1.2rem;
-    border-radius: 6px;
-    border: 1px solid var(--border);
-    font-weight: 500;
-    transition: all 0.2s ease;
-  }
-  a.btn:hover {
-    background-color: #30363d;
-    border-color: var(--accent);
-    color: var(--accent);
-  }
-  a.btn-primary {
-    background-color: var(--accent);
-    color: #1a1405;
-    border-color: var(--accent);
-    font-weight: 600;
-  }
-  a.btn-primary:hover {
-    background-color: #f3b950;
-    color: #000;
-  }
-  footer {
-    text-align: center;
-    font-size: 0.85rem;
-    color: var(--text-muted);
-    border-top: 1px solid var(--border);
-    padding-top: 1.5rem;
-    margin-top: 2rem;
-  }
-  footer a {
-    color: var(--text-muted);
-    text-decoration: underline;
-  }
-  footer a:hover {
-    color: var(--accent);
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  header.site{border-bottom:1px solid var(--line);background:rgba(15,17,21,.96)}
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 20px}
+  .wordmark{font-weight:800;letter-spacing:.02em;font-size:1.15rem;color:var(--text);text-decoration:none}
+  .wordmark span{color:var(--accent)}
+  .bar a.support{margin-left:auto;color:var(--muted);text-decoration:none;font-size:.92rem}
+  .bar a.support:hover{color:var(--accent)}
+  .hero{padding:44px 0 28px}
+  .hero h1{margin:0 0 10px;font-size:clamp(1.8rem,4.5vw,2.9rem);line-height:1.15}
+  .hero p.lede{margin:0 0 18px;color:var(--muted);font-size:clamp(1rem,2.4vw,1.2rem);max-width:62ch}
+  .hero img.feature{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line);display:block}
+  .cards{display:grid;grid-template-columns:1fr;gap:18px;padding:28px 0 8px}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px}
+  .card h2{margin:0 0 6px;font-size:1.35rem}
+  .card p.desc{margin:0 0 12px;color:var(--muted)}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .badge{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:4px 10px;font-size:.82rem}
+  .card img.shot{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:0 0 14px}
+  .gallery{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 14px}
+  .gallery img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
+  .cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 22px}
+  .cta.disabled{cursor:default;opacity:.75}
+  .howto{padding:26px 0 6px}
+  .howto h2{margin:0 0 10px}
+  .howto ol{margin:0;padding-left:22px;color:var(--muted)}
+  .howto li{margin:6px 0}
+  footer.site{border-top:1px solid var(--line);margin-top:36px;padding:24px 0 40px;color:var(--muted)}
+  footer.site nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 10px}
+  footer.site nav a{color:var(--text);text-decoration:none}
+  footer.site nav a:hover{color:var(--accent)}
+  small{color:var(--muted)}
+  @media (min-width:760px){
+    .cards{grid-template-columns:1fr 1fr}
+    .gallery{grid-template-columns:1fr 1fr}
   }
 </style>
 </head>
 <body>
-<div class="container">
-  <header>
-    <img src="store/feature-graphic.png" alt="Crown &amp; Outpost Banner" class="banner" onerror="this.style.display='none'">
-    <div class="logo-row">
-      <img src="store/icon-512.png" alt="Crown &amp; Outpost Icon" class="app-icon" onerror="this.style.display='none'">
-      <div>
-        <h1>Coldblooded Games</h1>
-        <p class="tagline">Independent game development</p>
-      </div>
-    </div>
-  </header>
+<header class="site">
+  <div class="wrap bar">
+    <a class="wordmark" href="index.html">Coldblooded <span>Games</span></a>
+    <a class="support" href="mailto:support@coldbloodedgames.com">support@coldbloodedgames.com</a>
+  </div>
+</header>
 
-  <main>
-    <section class="card">
-      <span class="badge">Current Release</span>
+<main class="wrap">
+  <section class="hero">
+    <h1>Tactical crown-and-fortress games.</h1>
+    <p class="lede">Coldblooded Games makes tactical crown-and-fortress games. Hold the gate, deploy your squads, break the bosses.</p>
+    <img class="feature" src="assets/feature-outpost.jpg" alt="Crown &amp; Outpost key art" loading="lazy">
+  </section>
+
+  <section class="cards" aria-label="Games">
+    <article class="card" id="outpost">
       <h2>Crown &amp; Outpost</h2>
-      <p>A strategic medieval fortress defense game built for Android. Command garrison battalions, deploy royal doctrines, position vanguard hero champions, and hold the outer wall against relentless siege waves.</p>
-      <ul>
-        <li><strong>100% Offline:</strong> No account, no logins, no internet required.</li>
-        <li><strong>Privacy Respecting:</strong> Zero telemetry, zero analytics, zero ads, zero data collection.</li>
-        <li><strong>Fair Progression:</strong> No microtransactions or pay-to-win mechanics.</li>
-      </ul>
-      <div class="links">
-        <a class="btn btn-primary" href="store/privacy-policy.html">Privacy Policy</a>
-        <a class="btn" href="mailto:support@coldbloodedgames.com">Contact Support</a>
+      <p class="desc">Hold the fortress gate. Deploy six squads, break three bosses, earn Valor.</p>
+      <div class="badges" aria-label="Highlights">
+        <span class="badge">Free</span>
+        <span class="badge">Offline</span>
+        <span class="badge">Single player</span>
+        <span class="badge">Android</span>
       </div>
-    </section>
+      <img class="shot" src="assets/icon-outpost.png" alt="Crown &amp; Outpost icon" style="width:96px;border:0" loading="lazy">
+      <div class="gallery">
+        <img src="assets/shot-outpost-1.jpg" alt="Crown &amp; Outpost chapter 1 deploy screen" loading="lazy">
+        <img src="assets/shot-outpost-2.jpg" alt="Crown &amp; Outpost chapter 1 battle" loading="lazy">
+        <img src="assets/shot-outpost-3.jpg" alt="Crown &amp; Outpost chapter 4 crypt battle" loading="lazy">
+        <img src="assets/shot-outpost-4.jpg" alt="Crown &amp; Outpost title menu" loading="lazy">
+      </div>
+      <a class="cta" href="https://play.google.com/store/apps/details?id=com.coldbloodedgames.crownoutpost" rel="noopener">Get it on Google Play</a>
+      <p style="margin:12px 0 0"><small>Package: com.coldbloodedgames.crownoutpost</small></p>
+    </article>
 
-    <section class="card">
-      <h2>Legal &amp; Support</h2>
-      <p>For inquiries, support requests, or bug reports regarding any Coldblooded Games release, reach out directly via email at <a href="mailto:support@coldbloodedgames.com" style="color:var(--accent);">support@coldbloodedgames.com</a>.</p>
-    </section>
-  </main>
+    <article class="card" id="campaign">
+      <h2>Crown &amp; Campaign</h2>
+      <p class="desc">Real-time formation combat on a 3×3 grid.</p>
+      <div class="badges" aria-label="Highlights">
+        <span class="badge">Desktop</span>
+        <span class="badge">Formation battles</span>
+      </div>
+      <div class="gallery">
+        <img src="assets/shot-campaign-1.jpg" alt="Crown &amp; Campaign battle arena combat" loading="lazy">
+        <img src="assets/shot-campaign-2.jpg" alt="Crown &amp; Campaign mission battle" loading="lazy">
+        <img src="assets/shot-campaign-3.jpg" alt="Crown &amp; Campaign overworld HUD" loading="lazy">
+      </div>
+      <span class="cta disabled" aria-disabled="true">Coming soon</span>
+      <p style="margin:12px 0 0"><small>No store link yet — desktop release in progress.</small></p>
+    </article>
+  </section>
 
-  <footer>
-    <p>&copy; 2026 Coldblooded Games. All rights reserved.</p>
-    <p><a href="store/privacy-policy.html">Privacy Policy</a> &bull; <a href="mailto:support@coldbloodedgames.com">support@coldbloodedgames.com</a></p>
-  </footer>
-</div>
+  <section class="howto" id="how-to-play">
+    <h2>How to play — Crown &amp; Outpost</h2>
+    <ol>
+      <li>Scout the wave banner.</li>
+      <li>Deploy six squads into six slots.</li>
+      <li>Train, promote, and spend Valor Marks in the War Tent.</li>
+    </ol>
+  </section>
+
+  <section class="howto" id="support">
+    <h2>Support</h2>
+    <p style="margin:0;color:var(--muted)">Questions, bugs, or feedback: <a href="mailto:support@coldbloodedgames.com">support@coldbloodedgames.com</a></p>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap">
+    <nav>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms-license.html">Terms / License</a>
+      <a href="mailto:support@coldbloodedgames.com">support@coldbloodedgames.com</a>
+    </nav>
+    <small>© 2026 Coldblooded Games. Crown &amp; Outpost and Crown &amp; Campaign are products of Coldblooded Games.</small>
+  </div>
+</footer>
 </body>
 </html>

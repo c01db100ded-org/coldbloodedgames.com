@@ -24,7 +24,7 @@ Real assets used (no generation needed on first build):
 | Path | Source |
 |---|---|
 | `assets/icon-outpost.png` | `crown-outpost/docs/store/icon-512.png` (256px) |
-| `assets/feature-outpost.jpg` | `crown-outpost/docs/store/feature-graphic.png` (1024×500) |
+| `assets/main.webp` | HOM-297 new primary screenshot (1024px WebP) |
 | `assets/shot-outpost-*.jpg` | `crown-outpost/docs/store/screenshots/` (800px) |
 | `assets/shot-campaign-*.jpg` | `crown-campaign/test_logs/screenshots/` (800px) |
 

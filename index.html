@@ -35,6 +35,17 @@
   .badge{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:4px 10px;font-size:.82rem}
   .card img.shot{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block;margin:0 0 14px}
   .gallery{display:grid;grid-template-columns:1fr;gap:10px;margin:0 0 14px}
+  .gallery a{display:block;text-decoration:none}
+  .gallery a:hover img{border-color:var(--accent)}
+  .gallery a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:12px}
+  .lightbox{position:fixed;inset:0;background:rgba(5,6,8,.92);display:none;align-items:center;justify-content:center;padding:20px;z-index:50}
+  .lightbox.open{display:flex}
+  .lightbox img{max-width:100%;max-height:88vh;border-radius:12px;border:1px solid var(--line)}
+  .lightbox .cap{position:absolute;bottom:16px;left:0;right:0;text-align:center;color:var(--muted);font-size:.9rem}
+  .lightbox .close{position:absolute;top:14px;right:14px;background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;font-size:.95rem}
+  .icons-row{display:flex;gap:14px;align-items:center;margin:0 0 14px}
+  .icons-row img{border-radius:12px}
+  .icons-row figcaption{color:var(--muted);font-size:.88rem}
   .gallery img{width:100%;height:auto;border-radius:12px;border:1px solid var(--line);display:block}
   .cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 22px}
   .cta.disabled{cursor:default;opacity:.75}
@@ -65,7 +76,7 @@
   <section class="hero">
     <h1>Tactical crown-and-fortress games.</h1>
     <p class="lede">Coldblooded Games makes tactical crown-and-fortress games. Hold the gate, deploy your squads, break the bosses.</p>
-    <img class="feature" src="assets/feature-outpost.jpg" alt="Crown &amp; Outpost key art" loading="lazy">
+    <a href="assets/feature-outpost.jpg" style="display:block"><img class="feature" src="assets/feature-outpost.jpg" alt="Crown &amp; Outpost key art" loading="lazy"> </a>
   </section>
 
   <section class="cards" aria-label="Games">
@@ -82,15 +93,15 @@
         <span class="badge">6 squads</span>
         <span class="badge">Guided tutorial</span>
       </div>
-      <img class="shot" src="assets/icon-outpost.png" alt="Crown &amp; Outpost icon" style="width:96px;border:0" loading="lazy">
+      <a href="assets/icon-outpost.png" style="display:inline-block"><img class="shot" src="assets/icon-outpost.png" alt="Crown &amp; Outpost icon" style="width:96px;border:0" loading="lazy"> </a>
       <div class="gallery">
-        <img src="assets/01_ch1_deploy.webp" alt="Crown &amp; Outpost chapter 1 deploy screen" loading="lazy">
-        <img src="assets/02_ch1_battle.webp" alt="Crown &amp; Outpost chapter 1 battle" loading="lazy">
-        <img src="assets/03_ch2_marsh_battle.webp" alt="Crown &amp; Outpost chapter 2 marsh battle" loading="lazy">
-        <img src="assets/04_ch3_night_battle.webp" alt="Crown &amp; Outpost chapter 3 night battle" loading="lazy">
-        <img src="assets/05_war_tent_doctrines.webp" alt="Crown &amp; Outpost War Tent doctrines" loading="lazy">
-        <img src="assets/06_title_menu.webp" alt="Crown &amp; Outpost title menu" loading="lazy">
-        <img src="assets/07_ch4_crypt_battle.webp" alt="Crown &amp; Outpost chapter 4 Sunken Crypt battle" loading="lazy">
+        <a href="assets/01_ch1_deploy.webp"><img src="assets/01_ch1_deploy.webp" alt="Crown &amp; Outpost chapter 1 deploy screen" loading="lazy"> </a>
+        <a href="assets/02_ch1_battle.webp"><img src="assets/02_ch1_battle.webp" alt="Crown &amp; Outpost chapter 1 battle" loading="lazy"> </a>
+        <a href="assets/03_ch2_marsh_battle.webp"><img src="assets/03_ch2_marsh_battle.webp" alt="Crown &amp; Outpost chapter 2 marsh battle" loading="lazy"> </a>
+        <a href="assets/04_ch3_night_battle.webp"><img src="assets/04_ch3_night_battle.webp" alt="Crown &amp; Outpost chapter 3 night battle" loading="lazy"> </a>
+        <a href="assets/05_war_tent_doctrines.webp"><img src="assets/05_war_tent_doctrines.webp" alt="Crown &amp; Outpost War Tent doctrines" loading="lazy"> </a>
+        <a href="assets/06_title_menu.webp"><img src="assets/06_title_menu.webp" alt="Crown &amp; Outpost title menu" loading="lazy"> </a>
+        <a href="assets/07_ch4_crypt_battle.webp"><img src="assets/07_ch4_crypt_battle.webp" alt="Crown &amp; Outpost chapter 4 Sunken Crypt battle" loading="lazy"> </a>
       </div>
       <span class="cta disabled" aria-disabled="true">Coming soon</span>
       <p style="margin:12px 0 0"><small>No store link yet — Google Play listing in preview.</small></p>
@@ -104,10 +115,21 @@
         <span class="badge">Formation battles</span>
       </div>
       <div class="gallery">
-        <img src="assets/shot-campaign-1.jpg" alt="Crown &amp; Campaign battle arena combat" loading="lazy">
-        <img src="assets/shot-campaign-2.jpg" alt="Crown &amp; Campaign mission battle" loading="lazy">
-        <img src="assets/shot-campaign-3.jpg" alt="Crown &amp; Campaign overworld HUD" loading="lazy">
+        <a href="assets/campaign-title-menu.webp"><img src="assets/campaign-title-menu.webp" alt="Crown &amp; Campaign title menu over a castle terrace" loading="lazy"> </a>
+        <a href="assets/campaign-causeway-combat.webp"><img src="assets/campaign-causeway-combat.webp" alt="Crown &amp; Campaign active combat on the Causeway terrace" loading="lazy"> </a>
+        <a href="assets/campaign-causeway-v1.webp"><img src="assets/campaign-causeway-v1.webp" alt="Crown &amp; Campaign Causeway battle — knights, archers and a mage hold the line" loading="lazy"> </a>
+        <a href="assets/campaign-causeway-v2.webp"><img src="assets/campaign-causeway-v2.webp" alt="Crown &amp; Campaign Causeway battle — dragons attack the line" loading="lazy"> </a>
+        <a href="assets/campaign-war-tent.webp"><img src="assets/campaign-war-tent.webp" alt="Crown &amp; Campaign Royal War Tent doctrines menu" loading="lazy"> </a>
+        <a href="assets/campaign-road-recruitment.webp"><img src="assets/campaign-road-recruitment.webp" alt="Crown &amp; Campaign Road Chokepoint recruitment menu" loading="lazy"> </a>
+        <a href="assets/campaign-crypt-approach.webp"><img src="assets/campaign-crypt-approach.webp" alt="Crown &amp; Campaign Endless approach to the Sunken Crypt" loading="lazy"> </a>
+        <a href="assets/shot-campaign-1.jpg"><img src="assets/shot-campaign-1.jpg" alt="Crown &amp; Campaign battle arena combat" loading="lazy"> </a>
+        <a href="assets/shot-campaign-2.jpg"><img src="assets/shot-campaign-2.jpg" alt="Crown &amp; Campaign mission battle" loading="lazy"> </a>
+        <a href="assets/shot-campaign-3.jpg"><img src="assets/shot-campaign-3.jpg" alt="Crown &amp; Campaign overworld HUD" loading="lazy"> </a>
       </div>
+      <figure class="icons-row">
+        <a href="assets/icon-outpost-android.png" style="flex:0 0 96px"><img src="assets/icon-outpost-android.png" alt="Crown &amp; Campaign app icon (cropped from Android home screen)" style="width:96px;height:96px;border-radius:12px" loading="lazy"> </a>
+        <figcaption>Crown &amp; Campaign icon, as on your phone.</figcaption>
+      </figure>
       <span class="cta disabled" aria-disabled="true">Coming soon</span>
       <p style="margin:12px 0 0"><small>No store link yet — desktop release in progress.</small></p>
     </article>
@@ -141,5 +163,27 @@
     <small>© 2026 Coldblooded Games. Crown &amp; Outpost and Crown &amp; Campaign are products of Coldblooded Games.</small>
   </div>
 </footer>
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Full-size image viewer">
+  <button class="close" id="lightbox-close" type="button">Close &#10005;</button>
+  <img id="lightbox-img" src="" alt="">
+  <p class="cap" id="lightbox-cap"></p>
+</div>
+<script>
+(function(){
+  var lb=document.getElementById('lightbox'),img=document.getElementById('lightbox-img'),cap=document.getElementById('lightbox-cap');
+  function open(full,alt){img.src=full;img.alt=alt||'';cap.textContent=alt||'';lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');img.removeAttribute('src');document.body.style.overflow='';}
+  document.querySelectorAll('a[href$=".webp"],a[href$=".jpg"],a[href$=".png"]').forEach(function(a){
+    a.addEventListener('click',function(e){
+      var im=a.querySelector('img');
+      if(!im) return;
+      e.preventDefault(); open(a.getAttribute('href'), im.getAttribute('alt')||'');
+    });
+  });
+  document.getElementById('lightbox-close').addEventListener('click',close);
+  lb.addEventListener('click',function(e){if(e.target===lb) close();});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&lb.classList.contains('open')) close();});
+})();
+</script>
 </body>
 </html>

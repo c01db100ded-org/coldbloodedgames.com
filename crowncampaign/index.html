@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Crown &amp; Campaign — Coldblooded Games</title>
+<meta name="description" content="Crown & Campaign: real-time formation battles on desktop. In development at Coldblooded Games.">
+<link rel="icon" href="../assets/icon-outpost.png" type="image/png">
+<style>
+  :root{
+    --bg:#0f1115; --panel:#171b22; --panel2:#1f242e; --line:#2a303b;
+    --text:#e8ecf1; --muted:#9aa3b2; --accent:#d4a437; --accent-ink:#1a1405;
+    --radius:16px;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Ubuntu,Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+  a{color:var(--accent)}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 20px}
+  header.site{border-bottom:1px solid var(--line);background:rgba(15,17,21,.96)}
+  .bar{display:flex;align-items:center;gap:12px;padding:14px 20px}
+  .wordmark{font-weight:800;letter-spacing:.02em;font-size:1.15rem;color:var(--text);text-decoration:none}
+  .wordmark span{color:var(--accent)}
+  .bar a.support{margin-left:auto;color:var(--muted);text-decoration:none;font-size:.92rem}
+  .hero{padding:44px 0 28px}
+  .hero h1{margin:0 0 10px;font-size:clamp(1.8rem,4.5vw,2.9rem);line-height:1.15}
+  .hero p.lede{margin:0 0 18px;color:var(--muted);font-size:clamp(1rem,2.4vw,1.2rem);max-width:62ch}
+  .hero img.feature{width:100%;height:auto;border-radius:var(--radius);border:1px solid var(--line);display:block}
+  .badges{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+  .badge{background:var(--panel2);border:1px solid var(--line);color:var(--text);border-radius:999px;padding:4px 10px;font-size:.82rem}
+  .cta{display:inline-block;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border-radius:999px;padding:12px 22px}
+  .cta.disabled{cursor:default;opacity:.75}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:20px;margin:0 0 18px}
+  .card h2{margin:0 0 6px;font-size:1.35rem}
+  .card p{color:var(--muted)}
+  footer.site{border-top:1px solid var(--line);margin-top:36px;padding:24px 0 40px;color:var(--muted)}
+  footer.site nav{display:flex;flex-wrap:wrap;gap:8px 18px;margin:0 0 10px}
+  footer.site nav a{color:var(--text);text-decoration:none}
+  small{color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="site">
+  <div class="wrap bar">
+    <a class="wordmark" href="../index.html">Coldblooded <span>Games</span></a>
+    <a class="support" href="mailto:support@coldbloodedgames.com">support@coldbloodedgames.com</a>
+  </div>
+</header>
+<main class="wrap">
+
+  <section class="hero">
+    <h1>Crown &amp; Campaign</h1>
+    <p class="lede">Real-time formation combat on a 3&times;3 grid. March your squads across the campaign map, then fight it out in the arena.</p>
+    <div class="badges" aria-label="Highlights">
+      <span class="badge">Desktop</span>
+      <span class="badge">Formation battles</span>
+      <span class="badge">In development</span>
+    </div>
+    <img class="feature" src="../assets/campaign-town-march.webp" alt="Crown &amp; Campaign squad marching to Greendale" loading="lazy">
+  </section>
+  <section class="card">
+    <h2>Status</h2>
+    <p>Crown &amp; Campaign is in development. Its privacy policy and terms of service will be published here at launch.</p>
+    <span class="cta disabled" aria-disabled="true">Coming soon</span>
+  </section>
+
+</main>
+<footer class="site">
+  <div class="wrap">
+    <nav>
+      <a href="../index.html">Coldblooded Games home</a>
+      <a href="../terms-of-service.html">Studio Terms of Service</a>
+      <a href="mailto:support@coldbloodedgames.com">support@coldbloodedgames.com</a>
+    </nav>
+    <small>&copy; 2026 Coldblooded Games.</small>
+  </div>
+</footer>
+</body>
+</html>
